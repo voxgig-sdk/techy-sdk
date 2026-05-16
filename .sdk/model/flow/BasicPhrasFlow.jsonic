@@ -1,0 +1,28 @@
+# BasicPhrasFlow
+
+main: kit: flow: BasicPhrasFlow:
+{
+  entity: "phras",
+  kind: "basic",
+  name: "BasicPhrasFlow",
+  step: [
+    {
+      input: {
+        ref: "phras_ref01",
+        srcdatavar: "phras_ref01_data",
+        suffix: "_dt0"
+      }
+
+      op: "load",
+      valid: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-phras_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPhrasFlow"
+}

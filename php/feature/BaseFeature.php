@@ -1,0 +1,37 @@
+<?php
+declare(strict_types=1);
+
+// Techy SDK base feature
+
+class TechyBaseFeature
+{
+    public string $version;
+    public string $name;
+    public bool $active;
+
+    public function __construct()
+    {
+        $this->version = '0.0.1';
+        $this->name = 'base';
+        $this->active = true;
+    }
+
+    public function get_version(): string { return $this->version; }
+    public function get_name(): string { return $this->name; }
+    public function get_active(): bool { return $this->active; }
+
+    public function init(TechyContext $ctx, array $options): void {}
+    public function PostConstruct(TechyContext $ctx): void {}
+    public function PostConstructEntity(TechyContext $ctx): void {}
+    public function SetData(TechyContext $ctx): void {}
+    public function GetData(TechyContext $ctx): void {}
+    public function GetMatch(TechyContext $ctx): void {}
+    public function SetMatch(TechyContext $ctx): void {}
+    public function PrePoint(TechyContext $ctx): void {}
+    public function PreSpec(TechyContext $ctx): void {}
+    public function PreRequest(TechyContext $ctx): void {}
+    public function PreResponse(TechyContext $ctx): void {}
+    public function PreResult(TechyContext $ctx): void {}
+    public function PreDone(TechyContext $ctx): void {}
+    public function PreUnexpected(TechyContext $ctx): void {}
+}

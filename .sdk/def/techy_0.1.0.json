@@ -1,0 +1,106 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Techy",
+    "description": "Generate tech-savvy phrases. A simple API for generating cool tech-savvy sounding phrases in both plaintext and JSON formats.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "PerryPal"
+    },
+    "x-documentation": "https://techy-api.vercel.app/"
+  },
+  "servers": [
+    {
+      "url": "https://techy-api.vercel.app",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/api/text": {
+      "get": {
+        "summary": "Get tech phrase in plaintext",
+        "description": "Returns a randomly generated tech-savvy phrase in plain text format",
+        "operationId": "getTechPhraseText",
+        "tags": [
+          "Phrases"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with tech phrase in plaintext",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "example": "synergize revolutionary platforms"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/json": {
+      "get": {
+        "summary": "Get tech phrase in JSON",
+        "description": "Returns a randomly generated tech-savvy phrase in JSON format",
+        "operationId": "getTechPhraseJson",
+        "tags": [
+          "Phrases"
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response with tech phrase in JSON",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "description": "The generated tech-savvy phrase",
+                      "example": "synergize revolutionary platforms"
+                    }
+                  },
+                  "required": [
+                    "message"
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Phrases",
+      "description": "Endpoints for generating tech-savvy phrases"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "PerryPal"
+      }
+      description: "Generate tech-savvy phrases. A simple API for generating cool tech-savvy sounding phrases in both plaintext and JSON formats."
+      servers: [
+        {
+          description: "Production server"
+          url: "https://techy-api.vercel.app"
+        }
+      ]
+      title: "Techy"
+      version: "1.0.0"
+      "x-documentation": "https://techy-api.vercel.app/"
+    }
+  }
+}
+
+}
