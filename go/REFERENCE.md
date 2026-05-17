@@ -40,9 +40,9 @@ client := sdk.TestSDK(nil, nil)
 
 ### Instance Methods
 
-#### `Phras(data map[string]any) TechyEntity`
+#### `Phrase(data map[string]any) TechyEntity`
 
-Create a new `Phras` entity instance. Pass `nil` for no initial data.
+Create a new `Phrase` entity instance. Pass `nil` for no initial data.
 
 #### `OptionsMap() map[string]any`
 
@@ -80,10 +80,10 @@ same parameters as `Direct()`.
 
 ---
 
-## PhrasEntity
+## PhraseEntity
 
 ```go
-phras := client.Phras(nil)
+phrase := client.Phrase(nil)
 ```
 
 ### Fields
@@ -99,7 +99,7 @@ phras := client.Phras(nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Phras(nil).Load(map[string]any{"id": "phras_id"}, nil)
+result, err := client.Phrase(nil).Load(map[string]any{"id": "phrase_id"}, nil)
 ```
 
 ### Common Methods
@@ -116,7 +116,7 @@ Get or set the entity match criteria. Works the same as `Data()`.
 
 #### `Make() Entity`
 
-Create a new `PhrasEntity` instance with the same client and
+Create a new `PhraseEntity` instance with the same client and
 options.
 
 #### `GetName() string`

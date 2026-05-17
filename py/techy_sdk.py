@@ -213,9 +213,9 @@ class TechySDK:
         }, None
 
 
-    def Phras(self, data=None):
-        from entity.phras_entity import PhrasEntity
-        return PhrasEntity(self, data)
+    def Phrase(self, data=None):
+        from entity.phrase_entity import PhraseEntity
+        return PhraseEntity(self, data)
 
 
 

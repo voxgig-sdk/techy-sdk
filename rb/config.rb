@@ -22,11 +22,11 @@ module TechyConfig
           "content-type" => "application/json",
         },
         "entity" => {
-          "phras" => {},
+          "phrase" => {},
         },
       },
       "entity" => {
-        "phras" => {
+        "phrase" => {
           "fields" => [
             {
               "name" => "message",
@@ -36,7 +36,7 @@ module TechyConfig
               "index$" => 0,
             },
           ],
-          "name" => "phras",
+          "name" => "phrase",
           "op" => {
             "load" => {
               "name" => "load",

@@ -1,0 +1,28 @@
+# BasicPhraseFlow
+
+main: kit: flow: BasicPhraseFlow:
+{
+  entity: "phrase",
+  kind: "basic",
+  name: "BasicPhraseFlow",
+  step: [
+    {
+      input: {
+        ref: "phrase_ref01",
+        srcdatavar: "phrase_ref01_data",
+        suffix: "_dt0"
+      }
+
+      op: "load",
+      valid: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-phrase_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPhraseFlow"
+}

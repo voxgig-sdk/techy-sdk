@@ -3,7 +3,7 @@ package core
 import (
 	"fmt"
 
-	vs "github.com/voxgig/struct"
+	vs "github.com/voxgig-sdk/techy-sdk/go/utility/struct"
 )
 
 type TechySDK struct {
@@ -245,8 +245,8 @@ func (sdk *TechySDK) Direct(fetchargs map[string]any) (map[string]any, error) {
 }
 
 
-func (sdk *TechySDK) Phras(data map[string]any) TechyEntity {
-	return NewPhrasEntityFunc(sdk, data)
+func (sdk *TechySDK) Phrase(data map[string]any) TechyEntity {
+	return NewPhraseEntityFunc(sdk, data)
 }
 
 

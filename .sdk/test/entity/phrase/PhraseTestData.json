@@ -1,0 +1,25 @@
+{
+  "existing": {
+    "phrase": {
+      "PHRASE00": {
+        "message": "sa",
+        "id": "PHRASE00"
+      },
+      "PHRASE01": {
+        "message": "s14",
+        "id": "PHRASE01"
+      },
+      "PHRASE02": {
+        "message": "s1e",
+        "id": "PHRASE02"
+      }
+    }
+  },
+  "new": {
+    "phrase": {
+      "phrase_ref01": {
+        "message": "s28"
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 
 
-Available for [Golang](go/) and [Lua](lua/) and [PHP](php/) and [Python](py/) and [Ruby](rb/) and [TypeScript](ts/).
+Available for [Golang](go/) and [Go CLI](go-cli/) and [Lua](lua/) and [PHP](php/) and [Python](py/) and [Ruby](rb/) and [TypeScript](ts/).
 
 
 ## Entities
@@ -11,7 +11,7 @@ The API exposes one entity:
 
 | Entity | Description | API path |
 | --- | --- | --- |
-| **Phras** |  | `/api/json` |
+| **Phrase** |  | `/api/json` |
 
 Each entity supports the following operations where available: **load**, **list**, **create**,
 **update**, and **remove**.
@@ -59,7 +59,7 @@ and `body`.
 ### Golang
 
 ```go
-import sdk "github.com/voxgig-sdk/techy-sdk"
+import sdk "github.com/voxgig-sdk/techy-sdk/go"
 
 client := sdk.NewTechySDK(map[string]any{
     "apikey": os.Getenv("TECHY_APIKEY"),
@@ -77,8 +77,8 @@ local client = sdk.new({
 })
 
 
--- Load a specific phras
-local phras, err = client:Phras(nil):load(
+-- Load a specific phrase
+local phrase, err = client:Phrase(nil):load(
   { id = "example_id" }, nil
 )
 ```
@@ -94,8 +94,8 @@ $client = new TechySDK([
 ]);
 
 
-// Load a specific phras
-[$phras, $err] = $client->Phras(null)->load(
+// Load a specific phrase
+[$phrase, $err] = $client->Phrase(null)->load(
     ["id" => "example_id"], null
 );
 ```
@@ -111,8 +111,8 @@ client = TechySDK({
 })
 
 
-# Load a specific phras
-phras, err = client.Phras(None).load(
+# Load a specific phrase
+phrase, err = client.Phrase(None).load(
     {"id": "example_id"}, None
 )
 ```
@@ -127,8 +127,8 @@ client = TechySDK.new({
 })
 
 
-# Load a specific phras
-phras, err = client.Phras(nil).load(
+# Load a specific phrase
+phrase, err = client.Phrase(nil).load(
   { "id" => "example_id" }, nil
 )
 ```
@@ -154,7 +154,7 @@ in-memory mock, so tests run without a network connection.
 
 ```go
 client := sdk.TestSDK(nil, nil)
-result, err := client.Phras(nil).Load(
+result, err := client.Phrase(nil).Load(
     map[string]any{"id": "test01"}, nil,
 )
 ```
@@ -163,7 +163,7 @@ result, err := client.Phras(nil).Load(
 
 ```lua
 local client = sdk.test(nil, nil)
-local result, err = client:Phras(nil):load(
+local result, err = client:Phrase(nil):load(
   { id = "test01" }, nil
 )
 ```
@@ -172,7 +172,7 @@ local result, err = client:Phras(nil):load(
 
 ```php
 $client = TechySDK::test(null, null);
-[$result, $err] = $client->Phras(null)->load(
+[$result, $err] = $client->Phrase(null)->load(
     ["id" => "test01"], null
 );
 ```
@@ -181,7 +181,7 @@ $client = TechySDK::test(null, null);
 
 ```python
 client = TechySDK.test(None, None)
-result, err = client.Phras(None).load(
+result, err = client.Phrase(None).load(
     {"id": "test01"}, None
 )
 ```
@@ -190,7 +190,7 @@ result, err = client.Phras(None).load(
 
 ```ruby
 client = TechySDK.test(nil, nil)
-result, err = client.Phras(nil).load(
+result, err = client.Phrase(nil).load(
   { "id" => "test01" }, nil
 )
 ```
@@ -199,7 +199,7 @@ result, err = client.Phras(nil).load(
 
 ```ts
 const client = TechySDK.test()
-const result = await client.Phras().load({ id: 'test01' })
+const result = await client.Phrase().load({ id: 'test01' })
 // result.ok === true, result.data contains mock data
 ```
 
@@ -269,6 +269,7 @@ console.log(result.data)
 ## Language-specific documentation
 
 - [Golang SDK](go/README.md)
+- [Go CLI SDK](go-cli/README.md)
 - [Lua SDK](lua/README.md)
 - [PHP SDK](php/README.md)
 - [Python SDK](py/README.md)

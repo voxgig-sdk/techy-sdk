@@ -49,9 +49,9 @@ const client = TechySDK.test()
 
 ### Instance Methods
 
-#### `Phras(data?: object)`
+#### `Phrase(data?: object)`
 
-Create a new `Phras` entity instance.
+Create a new `Phrase` entity instance.
 
 **Parameters:**
 
@@ -59,7 +59,7 @@ Create a new `Phras` entity instance.
 | --- | --- | --- |
 | `data` | `object` | Initial entity data. |
 
-**Returns:** `PhrasEntity` instance.
+**Returns:** `PhraseEntity` instance.
 
 #### `options()`
 
@@ -107,10 +107,10 @@ Alias for `TechySDK.test()`.
 
 ---
 
-## PhrasEntity
+## PhraseEntity
 
 ```ts
-const phras = client.Phras()
+const phrase = client.Phrase()
 ```
 
 ### Fields
@@ -126,7 +126,7 @@ const phras = client.Phras()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Phras().load({ id: 'phras_id' })
+const result = await client.Phrase().load({ id: 'phrase_id' })
 ```
 
 ### Common Methods
@@ -143,7 +143,7 @@ Get or set the entity match criteria. Works the same as `data()`.
 
 #### `make()`
 
-Create a new `PhrasEntity` instance with the same client and
+Create a new `PhraseEntity` instance with the same client and
 options.
 
 #### `client()`

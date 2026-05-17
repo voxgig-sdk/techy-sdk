@@ -1,10 +1,10 @@
 package voxgigtechysdk
 
 import (
-	"github.com/voxgig-sdk/techy-sdk/core"
-	"github.com/voxgig-sdk/techy-sdk/entity"
-	"github.com/voxgig-sdk/techy-sdk/feature"
-	_ "github.com/voxgig-sdk/techy-sdk/utility"
+	"github.com/voxgig-sdk/techy-sdk/go/core"
+	"github.com/voxgig-sdk/techy-sdk/go/entity"
+	"github.com/voxgig-sdk/techy-sdk/go/feature"
+	_ "github.com/voxgig-sdk/techy-sdk/go/utility"
 )
 
 // Type aliases preserve external API.
@@ -32,8 +32,8 @@ func init() {
 	core.NewTestFeatureFunc = func() core.Feature {
 		return feature.NewTestFeature()
 	}
-	core.NewPhrasEntityFunc = func(client *core.TechySDK, entopts map[string]any) core.TechyEntity {
-		return entity.NewPhrasEntity(client, entopts)
+	core.NewPhraseEntityFunc = func(client *core.TechySDK, entopts map[string]any) core.TechyEntity {
+		return entity.NewPhraseEntity(client, entopts)
 	}
 }
 

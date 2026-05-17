@@ -48,7 +48,7 @@ class Config {
 
     entity: {
       
-      phras: {
+      phrase: {
       },
 
     }
@@ -56,7 +56,7 @@ class Config {
 
 
   entity = {
-    "phras": {
+    "phrase": {
       "fields": [
         {
           "name": "message",
@@ -66,7 +66,7 @@ class Config {
           "index$": 0
         }
       ],
-      "name": "phras",
+      "name": "phrase",
       "op": {
         "load": {
           "name": "load",

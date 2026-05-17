@@ -223,10 +223,10 @@ class TechySDK
     }
 
 
-    public function Phras($data = null)
+    public function Phrase($data = null)
     {
-        require_once __DIR__ . '/entity/phras_entity.php';
-        return new PhrasEntity($this, $data);
+        require_once __DIR__ . '/entity/phrase_entity.php';
+        return new PhraseEntity($this, $data);
     }
 
 

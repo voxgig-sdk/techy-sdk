@@ -28,7 +28,7 @@
         }
       },
       "entity": {
-        "phras": {
+        "phrase": {
           "alias": {
             "field": {}
           },
@@ -40,7 +40,7 @@
               "active": true
             }
           ],
-          "name": "phras",
+          "name": "phrase",
           "op": {
             "load": {
               "name": "load",
@@ -166,20 +166,23 @@
             },
             "rb": {
               "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
             }
           }
         }
       },
       "flow": {
-        "BasicPhrasFlow": {
-          "entity": "phras",
+        "BasicPhraseFlow": {
+          "entity": "phrase",
           "kind": "basic",
-          "name": "BasicPhrasFlow",
+          "name": "BasicPhraseFlow",
           "step": [
             {
               "input": {
-                "ref": "phras_ref01",
-                "srcdatavar": "phras_ref01_data",
+                "ref": "phrase_ref01",
+                "srcdatavar": "phrase_ref01_data",
                 "suffix": "_dt0"
               },
               "op": "load",
@@ -187,7 +190,7 @@
                 {
                   "apply": "TextFieldMark",
                   "def": {
-                    "mark": "Mark01-phras_ref01"
+                    "mark": "Mark01-phrase_ref01"
                   }
                 }
               ],
@@ -197,12 +200,39 @@
               "spec": []
             }
           ],
-          "key$": "BasicPhrasFlow",
+          "key$": "BasicPhraseFlow",
           "active": true,
           "param": {}
         }
       },
       "target": {
+        "go-cli": {
+          "title": "Go CLI",
+          "ext": "go",
+          "comment": {
+            "line": "//"
+          },
+          "module": {
+            "name": "techy"
+          },
+          "phase": {
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "deps": {},
+          "name": "go-cli",
+          "active": true
+        },
         "ts": {
           "title": "TypeScript",
           "ext": "ts",
@@ -243,14 +273,7 @@
             "name": "techy"
           },
           "srcfeature": false,
-          "deps": {
-            "github.com/voxgig/struct": {
-              "active": true,
-              "version": "v0.0.0",
-              "replace": "./utility/struct",
-              "kind": "prod"
-            }
-          },
+          "deps": {},
           "name": "go",
           "active": true
         },
@@ -338,15 +361,6 @@
     },
     "def": {
       "desc": ""
-    },
-    "api": {
-      "guide": {},
-      "entity": {}
     }
-  },
-  "name__orig": "techy",
-  "Name": "Techy",
-  "name_": "techy",
-  "name-": "techy",
-  "NAME": "TECHY"
+  }
 }

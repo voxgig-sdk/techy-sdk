@@ -22,10 +22,10 @@ const client = new TechySDK({
 })
 ```
 
-### 3. Load a phras
+### 3. Load a phrase
 
 ```ts
-const result = await client.Phras().load({ id: 'example_id' })
+const result = await client.Phrase().load({ id: 'example_id' })
 
 if (result.ok) {
   console.log(result.data)
@@ -173,7 +173,7 @@ new TechySDK(options?: {
 | `utility()` | `Utility` | Deep copy of the SDK utility object. |
 | `prepare(fetchargs?)` | `Promise<FetchDef>` | Build an HTTP request definition without sending it. |
 | `direct(fetchargs?)` | `Promise<DirectResult>` | Build and send an HTTP request. |
-| `Phras(data?)` | `PhrasEntity` | Create a Phras entity instance. |
+| `Phrase(data?)` | `PhraseEntity` | Create a Phrase entity instance. |
 | `tester(testopts?, sdkopts?)` | `TechySDK` | Create a test-mode client instance. |
 
 #### Static methods
@@ -244,7 +244,7 @@ The `prepare()` method returns:
 
 ### Entities
 
-#### Phras
+#### Phrase
 
 | Field | Description |
 | --- | --- |
@@ -259,9 +259,9 @@ API path: `/api/json`
 ## Entities
 
 
-### Phras
+### Phrase
 
-Create an instance: `const phras = client.Phras()`
+Create an instance: `const phrase = client.Phrase()`
 
 #### Operations
 
@@ -278,7 +278,7 @@ Create an instance: `const phras = client.Phras()`
 #### Example: Load
 
 ```ts
-const phras = await client.Phras().load({ id: 'phras_id' })
+const phrase = await client.Phrase().load({ id: 'phrase_id' })
 ```
 
 

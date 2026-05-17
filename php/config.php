@@ -27,11 +27,11 @@ class TechyConfig
           'content-type' => 'application/json',
         ],
                 "entity" => [
-                    "phras" => [],
+                    "phrase" => [],
                 ],
             ],
             "entity" => [
-        'phras' => [
+        'phrase' => [
           'fields' => [
             [
               'name' => 'message',
@@ -41,7 +41,7 @@ class TechyConfig
               'index$' => 0,
             ],
           ],
-          'name' => 'phras',
+          'name' => 'phrase',
           'op' => [
             'load' => [
               'name' => 'load',

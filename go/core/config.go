@@ -21,11 +21,11 @@ func MakeConfig() map[string]any {
 				"content-type": "application/json",
 			},
 			"entity": map[string]any{
-				"phras": map[string]any{},
+				"phrase": map[string]any{},
 			},
 		},
 		"entity": map[string]any{
-			"phras": map[string]any{
+			"phrase": map[string]any{
 				"fields": []any{
 					map[string]any{
 						"name": "message",
@@ -35,7 +35,7 @@ func MakeConfig() map[string]any {
 						"index$": 0,
 					},
 				},
-				"name": "phras",
+				"name": "phrase",
 				"op": map[string]any{
 					"load": map[string]any{
 						"name": "load",

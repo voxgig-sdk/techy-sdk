@@ -244,8 +244,8 @@ end
 
 
 
-function TechySDK:Phras(data)
-  local EntityMod = require("entity.phras_entity")
+function TechySDK:Phrase(data)
+  local EntityMod = require("entity.phrase_entity")
   return EntityMod.new(self, data)
 end
 

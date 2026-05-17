@@ -1,6 +1,6 @@
 package utility
 
-import "github.com/voxgig-sdk/techy-sdk/core"
+import "github.com/voxgig-sdk/techy-sdk/go/core"
 
 func prepareBodyUtil(ctx *core.Context) any {
 	op := ctx.Op

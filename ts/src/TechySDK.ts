@@ -1,6 +1,6 @@
 // Techy Ts SDK
 
-import { PhrasEntity } from './entity/PhrasEntity'
+import { PhraseEntity } from './entity/PhraseEntity'
 
 
 import { inspect } from 'node:util'
@@ -202,9 +202,9 @@ class TechySDK {
 
 
 
-  Phras(data?: any) {
+  Phrase(data?: any) {
     const self = this
-    return new PhrasEntity(self,data)
+    return new PhraseEntity(self,data)
   }
 
 

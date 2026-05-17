@@ -5,14 +5,14 @@ The Golang SDK for the Techy API. Provides an entity-oriented interface using st
 
 ## Install
 ```bash
-go get github.com/voxgig-sdk/techy-sdk
+go get github.com/voxgig-sdk/techy-sdk/go
 ```
 
 If the module is not yet published to a registry, use a `replace` directive
 in your `go.mod` to point to a local checkout:
 
 ```bash
-go mod edit -replace github.com/voxgig-sdk/techy-sdk=../path/to/github.com/voxgig-sdk/techy-sdk
+go mod edit -replace github.com/voxgig-sdk/techy-sdk/go=../path/to/github.com/voxgig-sdk/techy-sdk/go
 ```
 
 
@@ -30,8 +30,8 @@ import (
     "fmt"
     "os"
 
-    sdk "github.com/voxgig-sdk/techy-sdk"
-    "github.com/voxgig-sdk/techy-sdk/core"
+    sdk "github.com/voxgig-sdk/techy-sdk/go"
+    "github.com/voxgig-sdk/techy-sdk/go/core"
 )
 
 func main() {
@@ -40,10 +40,10 @@ func main() {
     })
 ```
 
-### 3. Load a phras
+### 3. Load a phrase
 
 ```go
-    result, err = client.Phras(nil).Load(
+    result, err = client.Phrase(nil).Load(
         map[string]any{"id": "example_id"}, nil,
     )
     if err != nil {
@@ -186,7 +186,7 @@ Creates a test-mode client with mock transport. Both arguments may be `nil`.
 | `GetUtility` | `() *Utility` | Copy of the SDK utility object. |
 | `Prepare` | `(fetchargs map[string]any) (map[string]any, error)` | Build an HTTP request definition without sending. |
 | `Direct` | `(fetchargs map[string]any) (map[string]any, error)` | Build and send an HTTP request. |
-| `Phras` | `(data map[string]any) TechyEntity` | Create a Phras entity instance. |
+| `Phrase` | `(data map[string]any) TechyEntity` | Create a Phrase entity instance. |
 
 ### Entity interface (TechyEntity)
 
@@ -220,7 +220,7 @@ On error, `"ok"` is `false` and `"err"` contains the error value.
 
 ### Entities
 
-#### Phras
+#### Phrase
 
 | Field | Description |
 | --- | --- |
@@ -235,9 +235,9 @@ API path: `/api/json`
 ## Entities
 
 
-### Phras
+### Phrase
 
-Create an instance: `phras := client.Phras(nil)`
+Create an instance: `phrase := client.Phrase(nil)`
 
 #### Operations
 
@@ -254,7 +254,7 @@ Create an instance: `phras := client.Phras(nil)`
 #### Example: Load
 
 ```go
-result, err := client.Phras(nil).Load(map[string]any{"id": "phras_id"}, nil)
+result, err := client.Phrase(nil).Load(map[string]any{"id": "phrase_id"}, nil)
 ```
 
 
@@ -308,7 +308,7 @@ Use `core.ToMapAny()` to safely cast results and nested data.
 ### Package structure
 
 ```
-github.com/voxgig-sdk/techy-sdk/
+github.com/voxgig-sdk/techy-sdk/go/
 ├── techy.go        # Root package — type aliases and constructors
 ├── core/               # SDK core — client, types, pipeline
 ├── entity/             # Entity implementations
@@ -317,7 +317,7 @@ github.com/voxgig-sdk/techy-sdk/
 └── test/               # Test suites
 ```
 
-The root package (`github.com/voxgig-sdk/techy-sdk`) re-exports everything needed
+The root package (`github.com/voxgig-sdk/techy-sdk/go`) re-exports everything needed
 for normal use. Import sub-packages only when you need specific types
 like `core.ToMapAny`.
 

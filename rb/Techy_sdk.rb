@@ -199,9 +199,9 @@ class TechySDK
   end
 
 
-  def Phras(data = nil)
-    require_relative 'entity/phras_entity'
-    PhrasEntity.new(self, data)
+  def Phrase(data = nil)
+    require_relative 'entity/phrase_entity'
+    PhraseEntity.new(self, data)
   end
 
 

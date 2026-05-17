@@ -1,0 +1,50 @@
+# Entity: phrase
+
+main: kit: entity: phrase: {
+
+  alias: field: {}
+
+  fields: [
+    {
+      name: "message"
+      req: true
+      type: "`$STRING`"
+    }
+  ]
+
+  name: "phrase"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          method: "GET"
+          orig: "/api/json"
+          parts: [
+            "api"
+            "json"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          method: "GET"
+          orig: "/api/text"
+          parts: [
+            "api"
+            "text"
+          ]
+          transform: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

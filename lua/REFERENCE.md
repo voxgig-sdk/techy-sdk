@@ -41,9 +41,9 @@ local client = sdk.test(nil, nil)
 
 ### Instance Methods
 
-#### `Phras(data)`
+#### `Phrase(data)`
 
-Create a new `Phras` entity instance. Pass `nil` for no initial data.
+Create a new `Phrase` entity instance. Pass `nil` for no initial data.
 
 #### `options_map() -> table`
 
@@ -81,10 +81,10 @@ same parameters as `direct()`.
 
 ---
 
-## PhrasEntity
+## PhraseEntity
 
 ```lua
-local phras = client:Phras(nil)
+local phrase = client:Phrase(nil)
 ```
 
 ### Fields
@@ -100,7 +100,7 @@ local phras = client:Phras(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:Phras(nil):load({ id = "phras_id" }, nil)
+local result, err = client:Phrase(nil):load({ id = "phrase_id" }, nil)
 ```
 
 ### Common Methods
@@ -123,7 +123,7 @@ Set the entity match criteria.
 
 #### `make() -> Entity`
 
-Create a new `PhrasEntity` instance with the same client and
+Create a new `PhraseEntity` instance with the same client and
 options.
 
 #### `get_name() -> string`

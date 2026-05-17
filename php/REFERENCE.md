@@ -42,9 +42,9 @@ $client = TechySDK::test();
 
 ### Instance Methods
 
-#### `Phras($data = null)`
+#### `Phrase($data = null)`
 
-Create a new `PhrasEntity` instance. Pass `null` for no initial data.
+Create a new `PhraseEntity` instance. Pass `null` for no initial data.
 
 #### `optionsMap(): array`
 
@@ -79,10 +79,10 @@ Prepare a fetch definition without sending the request. Returns `[$fetchdef, $er
 
 ---
 
-## PhrasEntity
+## PhraseEntity
 
 ```php
-$phras = $client->Phras();
+$phrase = $client->Phrase();
 ```
 
 ### Fields
@@ -98,7 +98,7 @@ $phras = $client->Phras();
 Load a single entity matching the given criteria.
 
 ```php
-[$result, $err] = $client->Phras()->load(["id" => "phras_id"]);
+[$result, $err] = $client->Phrase()->load(["id" => "phrase_id"]);
 ```
 
 ### Common Methods
@@ -119,9 +119,9 @@ Get the entity match criteria.
 
 Set the entity match criteria.
 
-#### `make(): PhrasEntity`
+#### `make(): PhraseEntity`
 
-Create a new `PhrasEntity` instance with the same client and
+Create a new `PhraseEntity` instance with the same client and
 options.
 
 #### `getName(): string`

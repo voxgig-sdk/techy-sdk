@@ -6,5 +6,5 @@ var NewBaseFeatureFunc func() Feature
 
 var NewTestFeatureFunc func() Feature
 
-var NewPhrasEntityFunc func(client *TechySDK, entopts map[string]any) TechyEntity
+var NewPhraseEntityFunc func(client *TechySDK, entopts map[string]any) TechyEntity
 

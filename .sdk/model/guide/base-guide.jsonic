@@ -5,7 +5,7 @@ guide: {
   metrics: count: path: 2
   metrics: count: method: 2
 
-  entity: phras: {
+  entity: phrase: {
     path: "/api/json": {
       op: load: method: *GET
     }

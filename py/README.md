@@ -31,10 +31,10 @@ client = TechySDK({
 })
 ```
 
-### 3. Load a phras
+### 3. Load a phrase
 
 ```python
-result, err = client.Phras(None).load({"id": "example_id"}, None)
+result, err = client.Phrase(None).load({"id": "example_id"}, None)
 if err:
     raise Exception(err)
 print(result)
@@ -165,7 +165,7 @@ Creates a test-mode client with mock transport. Both arguments may be `None`.
 | `get_utility` | `() -> Utility` | Copy of the SDK utility object. |
 | `prepare` | `(fetchargs) -> (dict, err)` | Build an HTTP request definition without sending. |
 | `direct` | `(fetchargs) -> (dict, err)` | Build and send an HTTP request. |
-| `Phras` | `(data) -> PhrasEntity` | Create a Phras entity instance. |
+| `Phrase` | `(data) -> PhraseEntity` | Create a Phrase entity instance. |
 
 ### Entity interface
 
@@ -201,7 +201,7 @@ On error, `ok` is `False` and `err` contains the error value.
 
 ### Entities
 
-#### Phras
+#### Phrase
 
 | Field | Description |
 | --- | --- |
@@ -216,9 +216,9 @@ API path: `/api/json`
 ## Entities
 
 
-### Phras
+### Phrase
 
-Create an instance: `const phras = client.Phras()`
+Create an instance: `const phrase = client.Phrase()`
 
 #### Operations
 
@@ -235,7 +235,7 @@ Create an instance: `const phras = client.Phras()`
 #### Example: Load
 
 ```ts
-const phras = await client.Phras().load({ id: 'phras_id' })
+const phrase = await client.Phrase().load({ id: 'phrase_id' })
 ```
 
 

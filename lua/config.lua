@@ -21,11 +21,11 @@ local function make_config()
         ["content-type"] = "application/json",
       },
       entity = {
-        ["phras"] = {},
+        ["phrase"] = {},
       },
     },
     entity = {
-      ["phras"] = {
+      ["phrase"] = {
         ["fields"] = {
           {
             ["name"] = "message",
@@ -35,7 +35,7 @@ local function make_config()
             ["index$"] = 0,
           },
         },
-        ["name"] = "phras",
+        ["name"] = "phrase",
         ["op"] = {
           ["load"] = {
             ["name"] = "load",

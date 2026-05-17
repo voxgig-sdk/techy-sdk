@@ -42,9 +42,9 @@ client = TechySDK.test
 
 ### Instance Methods
 
-#### `Phras(data = nil)`
+#### `Phrase(data = nil)`
 
-Create a new `Phras` entity instance. Pass `nil` for no initial data.
+Create a new `Phrase` entity instance. Pass `nil` for no initial data.
 
 #### `options_map -> Hash`
 
@@ -82,10 +82,10 @@ same parameters as `direct()`.
 
 ---
 
-## PhrasEntity
+## PhraseEntity
 
 ```ruby
-phras = client.Phras
+phrase = client.Phrase
 ```
 
 ### Fields
@@ -101,7 +101,7 @@ phras = client.Phras
 Load a single entity matching the given criteria.
 
 ```ruby
-result, err = client.Phras.load({ "id" => "phras_id" })
+result, err = client.Phrase.load({ "id" => "phrase_id" })
 ```
 
 ### Common Methods
@@ -124,7 +124,7 @@ Set the entity match criteria.
 
 #### `make -> Entity`
 
-Create a new `PhrasEntity` instance with the same client and
+Create a new `PhraseEntity` instance with the same client and
 options.
 
 #### `get_name -> String`
