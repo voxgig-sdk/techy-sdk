@@ -38,10 +38,6 @@ class Config {
   options = {
     base: 'https://techy-api.vercel.app',
 
-    auth: {
-      prefix: 'Bearer',
-    },
-
     headers: {
       "content-type": "application/json"
     },

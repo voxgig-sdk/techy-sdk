@@ -62,14 +62,12 @@ function phrase_direct_setup(mockres)
   local env = runner.env_override({
     ["TECHY_TEST_PHRASE_ENTID"] = {},
     ["TECHY_TEST_LIVE"] = "FALSE",
-    ["TECHY_APIKEY"] = "NONE",
   })
 
   local live = env["TECHY_TEST_LIVE"] == "TRUE"
 
   if live then
     local merged_opts = {
-      apikey = env["TECHY_APIKEY"],
     }
     local client = sdk.new(merged_opts)
     return {

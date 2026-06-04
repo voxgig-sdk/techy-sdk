@@ -91,7 +91,6 @@ def _phrase_basic_setup(extra):
         "TECHY_TEST_PHRASE_ENTID": idmap,
         "TECHY_TEST_LIVE": "FALSE",
         "TECHY_TEST_EXPLAIN": "FALSE",
-        "TECHY_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -102,7 +101,6 @@ def _phrase_basic_setup(extra):
     if env.get("TECHY_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("TECHY_APIKEY"),
             },
             extra or {},
         ])

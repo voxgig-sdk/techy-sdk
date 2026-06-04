@@ -85,7 +85,6 @@ function phrase_basic_setup($extra)
         "TECHY_TEST_PHRASE_ENTID" => $idmap,
         "TECHY_TEST_LIVE" => "FALSE",
         "TECHY_TEST_EXPLAIN" => "FALSE",
-        "TECHY_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,7 +96,6 @@ function phrase_basic_setup($extra)
     if ($env["TECHY_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["TECHY_APIKEY"],
             ],
             $extra ?? [],
         ]);

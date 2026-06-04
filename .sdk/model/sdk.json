@@ -17,7 +17,15 @@
         ],
         "title": "Techy",
         "version": "1.0.0",
-        "x-documentation": "https://techy-api.vercel.app/"
+        "x-documentation": "https://techy-api.vercel.app/",
+        "tagline": "Generate tech-savvy phrases on demand for placeholder copy, demos, or fun",
+        "homepage": "https://techy-api.vercel.app",
+        "docs_url": "https://techy-api.vercel.app",
+        "about_md": "Techy is a tiny public API that returns randomly generated tech-savvy sounding phrases. It is hosted on Vercel at [techy-api.vercel.app](https://techy-api.vercel.app) and catalogued on [Free Public APIs](https://freepublicapis.com/techy).\n\nWhat you get from the API:\n\n- A single endpoint that returns one tech phrase per call, suitable for placeholder text, demos, jokes, or filler copy in UI mockups.\n\nOperational notes: the API requires no authentication. Community monitoring on Free Public APIs has flagged reliability concerns and reports that CORS is not enabled, so calls from browsers may need to be proxied through a server.",
+        "entity_desc": {
+          "phrase": "A randomly generated tech-savvy sounding phrase, retrieved via `GET /api/json`."
+        },
+        "auth": false
       },
       "config": {
         "auth": {
@@ -25,7 +33,15 @@
         },
         "headers": {
           "content-type": "application/json"
-        }
+        },
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ]
       },
       "entity": {
         "phrase": {
