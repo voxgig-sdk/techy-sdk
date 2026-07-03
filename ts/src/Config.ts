@@ -38,6 +38,10 @@ class Config {
   options = {
     base: 'https://techy-api.vercel.app',
 
+    auth: {
+      prefix: 'Bearer',
+    },
+
     headers: {
       "content-type": "application/json"
     },
@@ -55,52 +59,52 @@ class Config {
     "phrase": {
       "fields": [
         {
+          "active": true,
           "name": "message",
           "req": true,
           "type": "`$STRING`",
-          "active": true,
           "index$": 0
         }
       ],
       "name": "phrase",
       "op": {
         "load": {
+          "input": "data",
           "name": "load",
           "points": [
             {
+              "active": true,
+              "args": {},
               "method": "GET",
               "orig": "/api/json",
               "parts": [
                 "api",
                 "json"
               ],
+              "select": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
-              "args": {},
-              "select": {},
               "index$": 0
             },
             {
+              "active": true,
+              "args": {},
               "method": "GET",
               "orig": "/api/text",
               "parts": [
                 "api",
                 "text"
               ],
+              "select": {},
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
               },
-              "active": true,
-              "args": {},
-              "select": {},
               "index$": 1
             }
           ],
-          "input": "data",
           "key$": "load"
         }
       },

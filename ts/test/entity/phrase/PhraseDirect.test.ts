@@ -74,12 +74,14 @@ function directSetup(mockres?: any) {
   const env = envOverride({
     'TECHY_TEST_PHRASE_ENTID': {},
     'TECHY_TEST_LIVE': 'FALSE',
+    'TECHY_APIKEY': 'NONE',
   })
 
   const live = 'TRUE' === env.TECHY_TEST_LIVE
 
   if (live) {
     const client = new TechySDK({
+      apikey: env.TECHY_APIKEY,
     })
 
     let idmap: any = env['TECHY_TEST_PHRASE_ENTID']

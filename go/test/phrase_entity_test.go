@@ -117,6 +117,7 @@ func phraseBasicSetup(extra map[string]any) *entityTestSetup {
 		"TECHY_TEST_PHRASE_ENTID": idmap,
 		"TECHY_TEST_LIVE":      "FALSE",
 		"TECHY_TEST_EXPLAIN":   "FALSE",
+		"TECHY_APIKEY":         "NONE",
 	})
 
 	idmapResolved := core.ToMapAny(env["TECHY_TEST_PHRASE_ENTID"])
@@ -127,6 +128,7 @@ func phraseBasicSetup(extra map[string]any) *entityTestSetup {
 	if env["TECHY_TEST_LIVE"] == "TRUE" {
 		mergedOpts := vs.Merge([]any{
 			map[string]any{
+				"apikey": env["TECHY_APIKEY"],
 			},
 			extra,
 		})

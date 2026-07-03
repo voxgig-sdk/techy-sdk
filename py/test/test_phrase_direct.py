@@ -59,12 +59,14 @@ def _phrase_direct_setup(mockres):
     env = runner.env_override({
         "TECHY_TEST_PHRASE_ENTID": {},
         "TECHY_TEST_LIVE": "FALSE",
+        "TECHY_APIKEY": "NONE",
     })
 
     live = env.get("TECHY_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {
+            "apikey": env.get("TECHY_APIKEY"),
         }
         client = TechySDK(merged_opts)
         return {

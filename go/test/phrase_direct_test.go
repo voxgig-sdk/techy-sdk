@@ -99,12 +99,14 @@ func phraseDirectSetup(mockres any) *phraseDirectSetupResult {
 	env := envOverride(map[string]any{
 		"TECHY_TEST_PHRASE_ENTID": map[string]any{},
 		"TECHY_TEST_LIVE":    "FALSE",
+		"TECHY_APIKEY":       "NONE",
 	})
 
 	live := env["TECHY_TEST_LIVE"] == "TRUE"
 
 	if live {
 		mergedOpts := map[string]any{
+			"apikey": env["TECHY_APIKEY"],
 		}
 		client := sdk.NewTechySDK(mergedOpts)
 

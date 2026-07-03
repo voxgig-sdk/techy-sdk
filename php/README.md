@@ -1,6 +1,11 @@
 # Techy PHP SDK
 
-The PHP SDK for the Techy API. Provides an entity-oriented interface using PHP conventions.
+
+
+The PHP SDK for the Techy API — an entity-oriented client using PHP conventions.
+
+> Other languages, the CLI, and MCP server live alongside this one — see
+> the [top-level README](../README.md).
 
 
 ## Install
@@ -20,13 +25,15 @@ loading a specific record.
 <?php
 require_once 'techy_sdk.php';
 
-$client = new TechySDK([]);
+$client = new TechySDK([
+    "apikey" => getenv("TECHY_APIKEY"),
+]);
 ```
 
 ### 3. Load a phrase
 
 ```php
-[$result, $err] = $client->Phrase(null)->load(["id" => "example_id"], null);
+[$result, $err] = $client->Phrase()->load(["id" => "example_id"]);
 if ($err) { throw new \Exception($err); }
 print_r($result);
 ```
@@ -72,11 +79,9 @@ print_r($fetchdef["headers"]);
 Create a mock client for unit testing — no server required:
 
 ```php
-$client = TechySDK::test(null, null);
+$client = TechySDK::test();
 
-[$result, $err] = $client->Techy(null)->load(
-    ["id" => "test01"], null
-);
+[$result, $err] = $client->Techy()->load(["id" => "test01"]);
 // $result contains mock response data
 ```
 
@@ -111,6 +116,7 @@ Create a `.env.local` file at the project root:
 
 ```
 TECHY_TEST_LIVE=TRUE
+TECHY_APIKEY=<your-key>
 ```
 
 Then run:
@@ -133,6 +139,7 @@ Creates a new SDK client.
 
 | Option | Type | Description |
 | --- | --- | --- |
+| `apikey` | `string` | API key for authentication. |
 | `base` | `string` | Base URL of the API server. |
 | `prefix` | `string` | URL path prefix prepended to all requests. |
 | `suffix` | `string` | URL path suffix appended to all requests. |
