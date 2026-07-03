@@ -8,12 +8,14 @@ source = {
   dir = "techy-sdk/lua"
 }
 description = {
-  summary = "Techy SDK for Lua",
-  license = "MIT"
+  summary = "Unofficial generated Lua SDK for the Techy public API. Not affiliated with or endorsed by the upstream API provider.",
+  homepage = "https://github.com/voxgig-sdk/techy-sdk",
+  issues_url = "https://github.com/voxgig-sdk/techy-sdk/issues",
+  license = "MIT",
+  labels = { "voxgig", "sdk", "generated-sdk", "openapi", "api-client", "techy" }
 }
 dependencies = {
   "lua >= 5.3",
-  "dkjson >= 2.5",
   "dkjson >= 2.5",
 }
 build = {

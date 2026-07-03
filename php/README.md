@@ -10,7 +10,7 @@ The PHP SDK for the Techy API — an entity-oriented client using PHP convention
 
 ## Install
 ```bash
-composer require voxgig/techy-sdk
+composer require voxgig-sdk/techy
 ```
 
 

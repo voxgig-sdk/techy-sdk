@@ -10,7 +10,7 @@ The TypeScript SDK for the Techy API — a type-safe, entity-oriented client wit
 
 ## Install
 ```bash
-npm install techy
+npm install @voxgig-sdk/techy
 ```
 ## Tutorial: your first API call
 

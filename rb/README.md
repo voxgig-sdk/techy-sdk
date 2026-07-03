@@ -10,13 +10,13 @@ The Ruby SDK for the Techy API — an entity-oriented client using idiomatic Rub
 
 ## Install
 ```bash
-gem install techy-sdk
+gem install voxgig-sdk-techy
 ```
 
 Or add to your `Gemfile`:
 
 ```ruby
-gem "techy-sdk"
+gem "voxgig-sdk-techy"
 ```
 
 Then run:

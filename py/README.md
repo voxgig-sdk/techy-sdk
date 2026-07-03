@@ -10,7 +10,7 @@ The Python SDK for the Techy API — an entity-oriented client following Pythoni
 
 ## Install
 ```bash
-pip install techy-sdk
+pip install voxgig-sdk-techy
 ```
 
 Or install from source:
