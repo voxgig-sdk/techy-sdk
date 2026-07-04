@@ -220,25 +220,15 @@ class TechySDK:
         }
 
 
-    @property
-    def phrase(self):
-        """Idiomatic facade: client.phrase.list() / client.phrase.load({"id": ...})."""
-        from entity.phrase_entity import PhraseEntity
-        cached = getattr(self, "_phrase", None)
-        if cached is None:
-            cached = PhraseEntity(self, None)
-            self._phrase = cached
-        return cached
-
-    def Phrase(self, data=None):
-        # Deprecated: use client.phrase instead.
+    def Phrase(self, data=None) -> "PhraseEntity":
+        """Entity factory: client.Phrase().list({}) / client.Phrase().load({"id": ...})."""
         from entity.phrase_entity import PhraseEntity
         return PhraseEntity(self, data)
 
 
 
     @classmethod
-    def test(cls, testopts=None, sdkopts=None):
+    def test(cls, testopts=None, sdkopts=None) -> "TechySDK":
         if sdkopts is None:
             sdkopts = {}
         sdkopts = vs.clone(sdkopts)
@@ -258,3 +248,9 @@ class TechySDK:
         sdk.mode = "test"
 
         return sdk
+
+
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from entity.phrase_entity import PhraseEntity

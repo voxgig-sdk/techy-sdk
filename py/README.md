@@ -33,10 +33,12 @@ client = TechySDK()
 
 ### 3. Load a phrase
 
+`load()` returns the bare record (a `dict`) and raises on error.
+
 ```python
 try:
-    result = client.phrase.load({"id": "example_id"})
-    print(result)
+    phrase = client.Phrase().load({"id": "example_id"})
+    print(phrase)
 except Exception as err:
     print(f"load failed: {err}")
 ```
@@ -84,8 +86,9 @@ Create a mock client for unit testing — no server required:
 ```python
 client = TechySDK.test()
 
-result = client.phrase.load({"id": "test01"})
-# result contains mock response data
+# Entity ops return the bare record and raise on error.
+phrase = client.Phrase().load({"id": "test01"})
+# phrase contains the mock response record
 ```
 
 ### Use a custom fetch function
@@ -218,7 +221,7 @@ API path: `/api/json`
 
 ### Phrase
 
-Create an instance: `const phrase = client.phrase`
+Create an instance: `phrase = client.Phrase()`
 
 #### Operations
 
@@ -234,8 +237,8 @@ Create an instance: `const phrase = client.phrase`
 
 #### Example: Load
 
-```ts
-const phrase = await client.phrase.load({ id: 'phrase_id' })
+```python
+phrase = client.Phrase().load({"id": "phrase_id"})
 ```
 
 
@@ -309,7 +312,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```python
-phrase = client.phrase
+phrase = client.Phrase()
 phrase.load({"id": "example_id"})
 
 # phrase.data_get() now returns the loaded phrase data

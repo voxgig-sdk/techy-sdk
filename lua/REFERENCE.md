@@ -83,7 +83,7 @@ same parameters as `direct()`.
 ## PhraseEntity
 
 ```lua
-local phrase = client:phrase(nil)
+local phrase = client:Phrase(nil)
 ```
 
 ### Fields
@@ -99,7 +99,7 @@ local phrase = client:phrase(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:phrase():load({ id = "phrase_id" })
+local result, err = client:Phrase():load({ id = "phrase_id" })
 ```
 
 ### Common Methods

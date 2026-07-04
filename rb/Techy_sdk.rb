@@ -208,13 +208,7 @@ class TechySDK
   end
 
 
-  # Idiomatic facade: client.phrase.list / client.phrase.load({ "id" => ... })
-  def phrase
-    require_relative 'entity/phrase_entity'
-    @phrase ||= PhraseEntity.new(self, nil)
-  end
-
-  # Deprecated: use client.phrase instead.
+  # Canonical facade: client.Phrase.list / client.Phrase.load({ "id" => ... })
   def Phrase(data = nil)
     require_relative 'entity/phrase_entity'
     PhraseEntity.new(self, data)

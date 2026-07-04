@@ -204,14 +204,7 @@ class TechySDK {
 
 
 
-  _phrase?: PhraseEntity
-
-  // Idiomatic facade: `client.phrase.list()` / `client.phrase.load({ id })`.
-  get phrase(): PhraseEntity {
-    return (this._phrase ??= new PhraseEntity(this, undefined))
-  }
-
-  /** @deprecated Use `client.phrase` instead. */
+  // Entity access: `client.Phrase().list()` / `client.Phrase().load({ id })`.
   Phrase(data?: any) {
     const self = this
     return new PhraseEntity(self,data)

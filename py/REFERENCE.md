@@ -80,7 +80,7 @@ Prepare a fetch definition without sending. Returns the `fetchdef` and raises on
 ## PhraseEntity
 
 ```python
-phrase = client.phrase
+phrase = client.Phrase()
 ```
 
 ### Fields
@@ -96,7 +96,7 @@ phrase = client.phrase
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.phrase.load({"id": "phrase_id"})
+result = client.Phrase().load({"id": "phrase_id"})
 ```
 
 ### Common Methods

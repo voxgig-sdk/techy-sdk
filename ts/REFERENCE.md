@@ -109,7 +109,7 @@ Alias for `TechySDK.test()`.
 ## PhraseEntity
 
 ```ts
-const phrase = client.phrase
+const phrase = client.Phrase()
 ```
 
 ### Fields
@@ -125,7 +125,7 @@ const phrase = client.phrase
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.phrase.load({ id: 'phrase_id' })
+const result = await client.Phrase().load({ id: 'phrase_id' })
 ```
 
 ### Common Methods

@@ -85,7 +85,7 @@ Prepare a fetch definition without sending the request. Returns the
 ## PhraseEntity
 
 ```php
-$phrase = $client->phrase();
+$phrase = $client->Phrase();
 ```
 
 ### Fields
@@ -101,7 +101,7 @@ $phrase = $client->phrase();
 Load a single entity matching the given criteria. Throws on error.
 
 ```php
-$result = $client->phrase()->load(["id" => "phrase_id"]);
+$result = $client->Phrase()->load(["id" => "phrase_id"]);
 ```
 
 ### Common Methods

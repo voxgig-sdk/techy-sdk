@@ -86,7 +86,7 @@ same parameters as `direct()`. Raises on error.
 ## PhraseEntity
 
 ```ruby
-phrase = client.phrase
+phrase = client.Phrase
 ```
 
 ### Fields
@@ -102,7 +102,7 @@ phrase = client.phrase
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.phrase.load({ "id" => "phrase_id" })
+result = client.Phrase.load({ "id" => "phrase_id" })
 ```
 
 ### Common Methods

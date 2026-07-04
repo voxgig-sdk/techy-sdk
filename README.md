@@ -26,9 +26,9 @@ import { TechySDK } from '@voxgig-sdk/techy'
 
 const client = new TechySDK()
 
-// Load phrase data
-const phrase = await client.phrase.load({})
-console.log(phrase.data)
+// Load phrase data (returns a Phrase)
+const phrase = await client.Phrase().load()
+console.log(phrase)
 ```
 
 See the [TypeScript README](ts/README.md) for the full guide.
@@ -84,8 +84,8 @@ from techy_sdk import TechySDK
 client = TechySDK()
 
 
-# Load a specific phrase
-phrase = client.phrase.load({"id": "example_id"})
+# Load a specific phrase (returns the record, raises on error)
+phrase = client.Phrase().load({"id": "example_id"})
 print(phrase)
 ```
 
@@ -98,8 +98,8 @@ require_once 'techy_sdk.php';
 $client = new TechySDK();
 
 
-// Load a specific phrase
-$phrase = $client->phrase()->load(["id" => "example_id"]);
+// Load a specific phrase (returns the bare record; throws on error)
+$phrase = $client->Phrase()->load(["id" => "example_id"]);
 print_r($phrase);
 ```
 
@@ -123,8 +123,8 @@ require_relative "Techy_sdk"
 client = TechySDK.new
 
 
-# Load a specific phrase
-phrase = client.phrase.load({ "id" => "example_id" })
+# Load a specific phrase (returns the bare record; raises on error)
+phrase = client.Phrase.load({ "id" => "example_id" })
 puts phrase
 ```
 
@@ -137,7 +137,7 @@ local client = sdk.new()
 
 
 -- Load a specific phrase
-local phrase, err = client:phrase():load({ id = "example_id" })
+local phrase, err = client:Phrase():load({ id = "example_id" })
 print(phrase)
 ```
 
@@ -150,22 +150,27 @@ in-memory mock, so unit tests run offline.
 
 ```ts
 const client = TechySDK.test()
-const result = await client.phrase.load({ id: 'test01' })
-// result.ok === true, result.data contains mock data
+const phrase = await client.Phrase().load({ id: 'test01' })
+// phrase is a bare Phrase populated with mock data
+console.log(phrase)
 ```
 
 ### Python
 
 ```python
 client = TechySDK.test()
-result = client.phrase.load({"id": "test01"})
+phrase = client.Phrase().load({"id": "test01"})
+print(phrase)
 ```
 
 ### PHP
 
 ```php
-$client = TechySDK::test();
-$result = $client->phrase()->load(["id" => "test01"]);
+// Seed fixture data so offline calls resolve without a live server.
+$client = TechySDK::test([
+    "entity" => ["phrase" => ["test01" => ["id" => "test01"]]],
+]);
+$phrase = $client->Phrase()->load(["id" => "test01"]);
 ```
 
 ### Golang
@@ -180,15 +185,18 @@ result, err := client.Phrase(nil).Load(
 ### Ruby
 
 ```ruby
-client = TechySDK.test
-result = client.phrase.load({ "id" => "test01" })
+# Seed fixture data so offline calls resolve without a live server.
+client = TechySDK.test({
+  "entity" => { "phrase" => { "test01" => { "id" => "test01" } } },
+})
+phrase = client.Phrase.load({ "id" => "test01" })
 ```
 
 ### Lua
 
 ```lua
 local client = sdk.test()
-local result, err = client:phrase():load({ id = "test01" })
+local result, err = client:Phrase():load({ id = "test01" })
 ```
 
 ## How it works
@@ -236,6 +244,9 @@ const result = await client.direct({
   method: 'GET',
   params: { id: 'example' },
 })
+if (result instanceof Error) {
+  throw result
+}
 console.log(result.data)
 ```
 

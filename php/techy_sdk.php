@@ -233,10 +233,10 @@ class TechySDK
 
     private $_phrase = null;
 
-    // Idiomatic facade: $client->phrase()->list() / ->load(["id" => ...]).
-    // Also serves the deprecated PascalCase alias Phrase() (PHP method
-    // names are case-insensitive).
-    public function phrase($data = null)
+    // Canonical facade: $client->Phrase()->list() / ->load(["id" => ...]).
+    // PHP method names are case-insensitive, so lowercase $client->phrase()
+    // resolves here too.
+    public function Phrase($data = null)
     {
         require_once __DIR__ . '/entity/phrase_entity.php';
         if ($data === null) {

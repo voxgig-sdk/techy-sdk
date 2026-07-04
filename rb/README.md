@@ -32,8 +32,9 @@ client = TechySDK.new
 
 ```ruby
 begin
-  result = client.phrase.load({ "id" => "example_id" })
-  puts result
+  # load returns the bare Phrase record (raises on error).
+  phrase = client.Phrase.load({ "id" => "example_id" })
+  puts phrase
 rescue => err
   warn "load failed: #{err}"
 end
@@ -80,13 +81,17 @@ end
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```ruby
-client = TechySDK.test
+client = TechySDK.test({
+  "entity" => { "phrase" => { "test01" => { "id" => "test01" } } },
+})
 
-result = client.phrase.load({ "id" => "test01" })
-# result contains mock response data
+# load returns the bare mock record (raises on error).
+phrase = client.Phrase.load({ "id" => "test01" })
+puts phrase
 ```
 
 ### Use a custom fetch function
@@ -218,7 +223,7 @@ API path: `/api/json`
 
 ### Phrase
 
-Create an instance: `const phrase = client.phrase`
+Create an instance: `phrase = client.Phrase`
 
 #### Operations
 
@@ -234,8 +239,9 @@ Create an instance: `const phrase = client.phrase`
 
 #### Example: Load
 
-```ts
-const phrase = await client.phrase.load({ id: 'phrase_id' })
+```ruby
+# load returns the bare Phrase record (raises on error).
+phrase = client.Phrase.load({ "id" => "phrase_id" })
 ```
 
 
@@ -310,7 +316,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```ruby
-phrase = client.phrase
+phrase = client.Phrase
 phrase.load({ "id" => "example_id" })
 
 # phrase.data_get now returns the loaded phrase data

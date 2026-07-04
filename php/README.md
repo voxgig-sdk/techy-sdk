@@ -33,9 +33,10 @@ $client = new TechySDK();
 
 ```php
 try {
-    $result = $client->phrase()->load(["id" => "example_id"]);
-    print_r($result);
-} catch (\Exception $err) {
+    // load() returns the bare Phrase record (throws on error).
+    $phrase = $client->Phrase()->load(["id" => "example_id"]);
+    print_r($phrase);
+} catch (\Throwable $err) {
     echo "Error: " . $err->getMessage();
 }
 ```
@@ -81,13 +82,17 @@ print_r($fetchdef["headers"]);
 
 ### Use test mode
 
-Create a mock client for unit testing — no server required:
+Create a mock client for unit testing — no server required. Seed fixture
+data via the `entity` option so offline calls resolve without a live server:
 
 ```php
-$client = TechySDK::test();
+$client = TechySDK::test([
+    "entity" => ["phrase" => ["test01" => ["id" => "test01"]]],
+]);
 
-$result = $client->phrase()->load(["id" => "test01"]);
-// $result contains mock response data
+// load() returns the bare mock record (throws on error).
+$phrase = $client->Phrase()->load(["id" => "test01"]);
+print_r($phrase);
 ```
 
 ### Use a custom fetch function
@@ -223,7 +228,7 @@ API path: `/api/json`
 
 ### Phrase
 
-Create an instance: `const phrase = client.phrase`
+Create an instance: `$phrase = $client->Phrase();`
 
 #### Operations
 
@@ -239,8 +244,9 @@ Create an instance: `const phrase = client.phrase`
 
 #### Example: Load
 
-```ts
-const phrase = await client.phrase.load({ id: 'phrase_id' })
+```php
+// load() returns the bare Phrase record (throws on error).
+$phrase = $client->Phrase()->load(["id" => "phrase_id"]);
 ```
 
 
@@ -315,7 +321,7 @@ Entity instances are stateful. After a successful `load`, the entity
 stores the returned data and match criteria internally.
 
 ```php
-$phrase = $client->phrase();
+$phrase = $client->Phrase();
 $phrase->load(["id" => "example_id"]);
 
 // $phrase->dataGet() now returns the loaded phrase data
