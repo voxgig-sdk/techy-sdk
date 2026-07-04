@@ -244,6 +244,19 @@ end
 
 
 
+-- Idiomatic facade: client:phrase():list() / client:phrase():load({ id = ... })
+function TechySDK:phrase(data)
+  local EntityMod = require("entity.phrase_entity")
+  if data == nil then
+    if self._phrase == nil then
+      self._phrase = EntityMod.new(self, nil)
+    end
+    return self._phrase
+  end
+  return EntityMod.new(self, data)
+end
+
+-- Deprecated: use client:phrase() instead.
 function TechySDK:Phrase(data)
   local EntityMod = require("entity.phrase_entity")
   return EntityMod.new(self, data)

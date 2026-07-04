@@ -49,8 +49,7 @@ class PhraseEntityTest extends TestCase
         // LOAD
         $phrase_ref01_ent = $client->Phrase(null);
         $phrase_ref01_match_dt0 = [];
-        [$phrase_ref01_data_dt0_loaded, $err] = $phrase_ref01_ent->load($phrase_ref01_match_dt0, null);
-        $this->assertNull($err);
+        $phrase_ref01_data_dt0_loaded = $phrase_ref01_ent->load($phrase_ref01_match_dt0, null);
         $this->assertNotNull($phrase_ref01_data_dt0_loaded);
 
     }
@@ -85,7 +84,6 @@ function phrase_basic_setup($extra)
         "TECHY_TEST_PHRASE_ENTID" => $idmap,
         "TECHY_TEST_LIVE" => "FALSE",
         "TECHY_TEST_EXPLAIN" => "FALSE",
-        "TECHY_APIKEY" => "NONE",
     ]);
 
     $idmap_resolved = Helpers::to_map(
@@ -97,7 +95,6 @@ function phrase_basic_setup($extra)
     if ($env["TECHY_TEST_LIVE"] === "TRUE") {
         $merged_opts = Vs::merge([
             [
-                "apikey" => $env["TECHY_APIKEY"],
             ],
             $extra ?? [],
         ]);

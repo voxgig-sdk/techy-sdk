@@ -79,6 +79,10 @@ end
 
 
 
+---@param reqmatch PhraseLoadMatch
+---@param ctrl? table
+---@return Phrase
+---@return string? err
 function PhraseEntity:load(reqmatch, ctrl)
   local utility = self._utility
   local ctx = utility.make_context({

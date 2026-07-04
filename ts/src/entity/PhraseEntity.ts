@@ -14,9 +14,13 @@ import type {
   Control,
 } from '../types'
 
+import type {
+  Phrase,
+  PhraseLoadMatch,
+} from '../TechyTypes'
 
 // TODO: needs Entity superclass
-class PhraseEntity extends TechyEntityBase {
+class PhraseEntity extends TechyEntityBase<Phrase> {
 
   constructor(client: TechySDK, entopts: any) {
     super(client, entopts)
@@ -32,7 +36,7 @@ class PhraseEntity extends TechyEntityBase {
 
 
 
-  async load(this: any, reqmatch?: any, ctrl?: Control) {
+  async load(this: any, reqmatch?: PhraseLoadMatch, ctrl?: Control): Promise<Phrase> {
 
     const utility = this._utility
 
@@ -136,7 +140,9 @@ class PhraseEntity extends TechyEntityBase {
         throw err
       }
       else {
-        return undefined
+        // Off-happy-path (throw disabled): typed as any so the method's
+        // Promise<Phrase> return stays clean under strict null checks.
+        return undefined as any
       }
     }
   }

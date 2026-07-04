@@ -2,6 +2,8 @@
 
 import { PhraseEntity } from './entity/PhraseEntity'
 
+export type * from './TechyTypes'
+
 
 import { inspect } from 'node:util'
 
@@ -202,6 +204,14 @@ class TechySDK {
 
 
 
+  _phrase?: PhraseEntity
+
+  // Idiomatic facade: `client.phrase.list()` / `client.phrase.load({ id })`.
+  get phrase(): PhraseEntity {
+    return (this._phrase ??= new PhraseEntity(this, undefined))
+  }
+
+  /** @deprecated Use `client.phrase` instead. */
   Phrase(data?: any) {
     const self = this
     return new PhraseEntity(self,data)

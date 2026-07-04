@@ -245,6 +245,9 @@ func (sdk *TechySDK) Direct(fetchargs map[string]any) (map[string]any, error) {
 }
 
 
+// Phrase returns a Phrase entity bound to this client.
+// Idiomatic usage: client.Phrase(nil).List(nil, nil) or
+// client.Phrase(nil).Load(map[string]any{"id": ...}, nil).
 func (sdk *TechySDK) Phrase(data map[string]any) TechyEntity {
 	return NewPhraseEntityFunc(sdk, data)
 }

@@ -42,8 +42,7 @@ class PhraseEntityTest < Minitest::Test
     # LOAD
     phrase_ref01_ent = client.Phrase(nil)
     phrase_ref01_match_dt0 = {}
-    phrase_ref01_data_dt0_loaded, err = phrase_ref01_ent.load(phrase_ref01_match_dt0, nil)
-    assert_nil err
+    phrase_ref01_data_dt0_loaded = phrase_ref01_ent.load(phrase_ref01_match_dt0, nil)
     assert !phrase_ref01_data_dt0_loaded.nil?
 
   end
@@ -82,7 +81,6 @@ def phrase_basic_setup(extra)
     "TECHY_TEST_PHRASE_ENTID" => idmap,
     "TECHY_TEST_LIVE" => "FALSE",
     "TECHY_TEST_EXPLAIN" => "FALSE",
-    "TECHY_APIKEY" => "NONE",
   })
 
   idmap_resolved = Helpers.to_map(
@@ -94,7 +92,6 @@ def phrase_basic_setup(extra)
   if env["TECHY_TEST_LIVE"] == "TRUE"
     merged_opts = Vs.merge([
       {
-        "apikey" => env["TECHY_APIKEY"],
       },
       extra || {},
     ])

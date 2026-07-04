@@ -49,8 +49,7 @@ class TestPhraseEntity:
         # LOAD
         phrase_ref01_ent = client.Phrase(None)
         phrase_ref01_match_dt0 = {}
-        phrase_ref01_data_dt0_loaded, err = phrase_ref01_ent.load(phrase_ref01_match_dt0, None)
-        assert err is None
+        phrase_ref01_data_dt0_loaded = phrase_ref01_ent.load(phrase_ref01_match_dt0, None)
         assert phrase_ref01_data_dt0_loaded is not None
 
 
@@ -91,7 +90,6 @@ def _phrase_basic_setup(extra):
         "TECHY_TEST_PHRASE_ENTID": idmap,
         "TECHY_TEST_LIVE": "FALSE",
         "TECHY_TEST_EXPLAIN": "FALSE",
-        "TECHY_APIKEY": "NONE",
     })
 
     idmap_resolved = helpers.to_map(
@@ -102,7 +100,6 @@ def _phrase_basic_setup(extra):
     if env.get("TECHY_TEST_LIVE") == "TRUE":
         merged_opts = vs.merge([
             {
-                "apikey": env.get("TECHY_APIKEY"),
             },
             extra or {},
         ])

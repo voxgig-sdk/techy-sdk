@@ -113,7 +113,6 @@ function basicSetup(extra?: any) {
     'TECHY_TEST_PHRASE_ENTID': idmap,
     'TECHY_TEST_LIVE': 'FALSE',
     'TECHY_TEST_EXPLAIN': 'FALSE',
-    'TECHY_APIKEY': 'NONE',
   })
 
   idmap = env['TECHY_TEST_PHRASE_ENTID']
@@ -123,7 +122,6 @@ function basicSetup(extra?: any) {
   if (live) {
     client = new TechySDK(merge([
       {
-        apikey: env.TECHY_APIKEY,
       },
       extra
     ]))
