@@ -17,7 +17,7 @@ Phrase = Struct.new(
   keyword_init: true
 )
 
-# Match filter for Phrase#load (any subset of Phrase fields).
+# Request payload for Phrase#load.
 #
 # @!attribute [rw] message
 #   @return [String, nil]

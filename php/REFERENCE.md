@@ -45,11 +45,11 @@ $client = TechySDK::test();
 
 Create a new `PhraseEntity` instance. Pass `null` for no initial data.
 
-#### `optionsMap(): array`
+#### `options_map(): array`
 
 Return a deep copy of the current SDK options.
 
-#### `getUtility(): ProjectNameUtility`
+#### `get_utility(): TechyUtility`
 
 Return a copy of the SDK utility object.
 
@@ -92,7 +92,7 @@ $phrase = $client->Phrase();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | ``$STRING`` | Yes |  |
+| `message` | `string` | Yes |  |
 
 ### Operations
 
@@ -101,24 +101,24 @@ $phrase = $client->Phrase();
 Load a single entity matching the given criteria. Throws on error.
 
 ```php
-$result = $client->Phrase()->load(["id" => "phrase_id"]);
+$result = $client->Phrase()->load();
 ```
 
 ### Common Methods
 
-#### `dataGet(): array`
+#### `data_get(): array`
 
 Get the entity data. Returns a copy of the current data.
 
-#### `dataSet($data): void`
+#### `data_set($data): void`
 
 Set the entity data.
 
-#### `matchGet(): array`
+#### `match_get(): array`
 
 Get the entity match criteria.
 
-#### `matchSet($match): void`
+#### `match_set($match): void`
 
 Set the entity match criteria.
 
@@ -127,7 +127,7 @@ Set the entity match criteria.
 Create a new `PhraseEntity` instance with the same client and
 options.
 
-#### `getName(): string`
+#### `get_name(): string`
 
 Return the entity name.
 

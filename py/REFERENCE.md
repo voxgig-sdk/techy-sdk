@@ -87,7 +87,7 @@ phrase = client.Phrase()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | ``$STRING`` | Yes |  |
+| `message` | `str` | Yes |  |
 
 ### Operations
 
@@ -96,7 +96,7 @@ phrase = client.Phrase()
 Load a single entity matching the given criteria. Returns the entity data and raises on error.
 
 ```python
-result = client.Phrase().load({"id": "phrase_id"})
+result = client.Phrase().load()
 ```
 
 ### Common Methods

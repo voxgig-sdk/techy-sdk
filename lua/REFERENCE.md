@@ -90,7 +90,7 @@ local phrase = client:Phrase(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | ``$STRING`` | Yes |  |
+| `message` | `string` | Yes |  |
 
 ### Operations
 
@@ -99,7 +99,7 @@ local phrase = client:Phrase(nil)
 Load a single entity matching the given criteria.
 
 ```lua
-local result, err = client:Phrase():load({ id = "phrase_id" })
+local result, err = client:Phrase():load()
 ```
 
 ### Common Methods

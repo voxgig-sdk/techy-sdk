@@ -221,7 +221,7 @@ class TechySDK:
 
 
     def Phrase(self, data=None) -> "PhraseEntity":
-        """Entity factory: client.Phrase().list({}) / client.Phrase().load({"id": ...})."""
+        """Entity factory: client.Phrase().list() / client.Phrase().load({"id": ...})."""
         from entity.phrase_entity import PhraseEntity
         return PhraseEntity(self, data)
 

@@ -116,7 +116,7 @@ const phrase = client.Phrase()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | ``$STRING`` | Yes |  |
+| `message` | `string` | Yes |  |
 
 ### Operations
 
@@ -125,7 +125,7 @@ const phrase = client.Phrase()
 Load a single entity matching the given criteria.
 
 ```ts
-const result = await client.Phrase().load({ id: 'phrase_id' })
+const result = await client.Phrase().load()
 ```
 
 ### Common Methods

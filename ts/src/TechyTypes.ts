@@ -9,5 +9,7 @@ export interface Phrase {
   message: string
 }
 
-export type PhraseLoadMatch = Partial<Phrase>
+export interface PhraseLoadMatch {
+  message?: string
+}
 

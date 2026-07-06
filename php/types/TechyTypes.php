@@ -18,7 +18,7 @@ class Phrase
     public string $message;
 }
 
-/** Match filter for Phrase#load (any subset of Phrase fields). */
+/** Request payload for Phrase#load. */
 class PhraseLoadMatch
 {
     public ?string $message = null;

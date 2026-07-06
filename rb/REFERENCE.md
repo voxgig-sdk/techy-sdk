@@ -8,7 +8,7 @@ Complete API reference for the Techy Ruby SDK.
 ### Constructor
 
 ```ruby
-require_relative 'techy_sdk'
+require_relative 'Techy_sdk'
 
 client = TechySDK.new(options)
 ```
@@ -93,7 +93,7 @@ phrase = client.Phrase
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | ``$STRING`` | Yes |  |
+| `message` | `String` | Yes |  |
 
 ### Operations
 
@@ -102,7 +102,7 @@ phrase = client.Phrase
 Load a single entity matching the given criteria. Raises on error.
 
 ```ruby
-result = client.Phrase.load({ "id" => "phrase_id" })
+result = client.Phrase.load()
 ```
 
 ### Common Methods

@@ -97,7 +97,7 @@ phrase := client.Phrase(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | ``$STRING`` | Yes |  |
+| `message` | `string` | Yes |  |
 
 ### Operations
 
@@ -106,7 +106,7 @@ phrase := client.Phrase(nil)
 Load a single entity matching the given criteria.
 
 ```go
-result, err := client.Phrase(nil).Load(map[string]any{"id": "phrase_id"}, nil)
+result, err := client.Phrase(nil).Load(nil, nil)
 ```
 
 ### Common Methods

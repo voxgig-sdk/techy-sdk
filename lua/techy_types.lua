@@ -10,6 +10,7 @@
 ---@field message string
 
 ---@class PhraseLoadMatch
+---@field message? string
 
 local M = {}
 

@@ -13,8 +13,7 @@ type Phrase struct {
 	Message string `json:"message"`
 }
 
-// PhraseLoadMatch mirrors the phrase fields as an all-optional match
-// filter (Go analog of Partial<Phrase>).
+// PhraseLoadMatch is the typed request payload for Phrase.LoadTyped.
 type PhraseLoadMatch struct {
 	Message *string `json:"message,omitempty"`
 }
