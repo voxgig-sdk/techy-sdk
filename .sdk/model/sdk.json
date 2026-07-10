@@ -6,9 +6,6 @@
     },
     "kit": {
       "config": {
-        "auth": {
-          "prefix": "Bearer"
-        },
         "docs_order": [
           "ts",
           "py",
@@ -210,14 +207,17 @@
           "name": "PerryPal"
         },
         "description": "Generate tech-savvy phrases. A simple API for generating cool tech-savvy sounding phrases in both plaintext and JSON formats.",
+        "meta_source": "https://www.freepublicapis.com",
         "servers": [
           {
             "description": "Production server",
             "url": "https://techy-api.vercel.app"
           }
         ],
+        "summary": "Generate tech-savvy phrases.",
         "title": "Techy",
         "version": "1.0.0",
+        "website": "https://techy-api.vercel.app",
         "x-documentation": "https://techy-api.vercel.app/"
       },
       "option": {},
@@ -271,6 +271,9 @@
           },
           "name": "go-cli",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },
@@ -321,6 +324,9 @@
           },
           "name": "go-mcp",
           "phase": {
+            "agentguide": {
+              "active": false
+            },
             "entity": {
               "active": false
             },

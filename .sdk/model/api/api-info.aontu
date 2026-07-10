@@ -15,10 +15,10 @@ main: {
           url: "https://techy-api.vercel.app"
         }
       ]
+      summary: "Generate tech-savvy phrases."
       title: "Techy"
       version: "1.0.0"
+      website: "https://techy-api.vercel.app"
       "x-documentation": "https://techy-api.vercel.app/"
     }
   }
-}
-

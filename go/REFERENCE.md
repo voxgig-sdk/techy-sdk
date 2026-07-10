@@ -91,6 +91,7 @@ same parameters as `Direct()`.
 
 ```go
 phrase := client.Phrase(nil)
+fmt.Println(phrase.GetName()) // "phrase"
 ```
 
 ### Fields
@@ -107,6 +108,10 @@ Load a single entity matching the given criteria.
 
 ```go
 result, err := client.Phrase(nil).Load(nil, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(result)
 ```
 
 ### Common Methods
