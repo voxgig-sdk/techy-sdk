@@ -1,4 +1,4 @@
--- ProjectName SDK exists test
+-- Techy SDK exists test
 
 local sdk = require("techy_sdk")
 

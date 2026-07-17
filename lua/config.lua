@@ -1,4 +1,4 @@
--- ProjectName SDK configuration
+-- Techy SDK configuration
 
 local function make_config()
   return {
