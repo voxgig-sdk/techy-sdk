@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# Techy SDK exists test
 
 import pytest
 from techy_sdk import TechySDK

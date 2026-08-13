@@ -34,7 +34,7 @@ client = TechySDK.new
 
 ```ruby
 begin
-  # load returns the bare Phrase record (raises on error).
+  # load returns the ENTITY — call data_get for the Phrase record (raises on error).
   phrase = client.Phrase.load()
   puts phrase
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = TechySDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 phrase = client.Phrase.load()
 puts phrase
 ```
@@ -264,7 +265,7 @@ Create an instance: `phrase = client.Phrase`
 #### Example: Load
 
 ```ruby
-# load returns the bare Phrase record (raises on error).
+# load returns the ENTITY — call data_get for the Phrase record (raises on error).
 phrase = client.Phrase.load()
 ```
 

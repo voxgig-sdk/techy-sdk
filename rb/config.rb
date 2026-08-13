@@ -42,6 +42,7 @@ module TechyConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/json",
                   "parts" => [
@@ -58,6 +59,7 @@ module TechyConfig
                 {
                   "active" => true,
                   "args" => {},
+                  "kind" => "http",
                   "method" => "GET",
                   "orig" => "/api/text",
                   "parts" => [

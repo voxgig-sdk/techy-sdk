@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = TechySDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = TechySDK.test({
+  entity: {
+    phrase: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const phrase = await client.Phrase().load()
-// phrase is a bare Phrase populated with mock data
+// phrase is the Phrase entity, populated with mock data
+// — call phrase.data() for the record itself
 console.log(phrase)
 ```
 
@@ -182,7 +191,7 @@ require_once 'techy_sdk.php';
 $client = new TechySDK();
 
 
-// Load a specific phrase (returns the bare record; throws on error)
+// Load a specific phrase (returns the ENTITY; call data_get() for the record; throws on error)
 $phrase = $client->Phrase()->load();
 print_r($phrase);
 ```
@@ -210,7 +219,7 @@ require_relative "Techy_sdk"
 client = TechySDK.new
 
 
-# Load a specific phrase (returns the bare record; raises on error)
+# Load a specific phrase (returns the ENTITY; call data_get for the record)
 phrase = client.Phrase.load()
 puts phrase
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://techy-api.vercel.app](https://techy-api.vercel.app)
 

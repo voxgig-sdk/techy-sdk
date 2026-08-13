@@ -47,6 +47,7 @@ class TechyConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/json',
                   'parts' => [
@@ -63,6 +64,7 @@ class TechyConfig
                 [
                   'active' => true,
                   'args' => [],
+                  'kind' => 'http',
                   'method' => 'GET',
                   'orig' => '/api/text',
                   'parts' => [

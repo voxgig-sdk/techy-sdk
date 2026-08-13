@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import TechyControl
-from core.error import TechyError
-from core.result import TechyResult
-from core.spec import TechySpec
+from techy_sdk.config import make_config
+from techy_sdk.features import _make_feature
+from techy_sdk.core.control import TechyControl
+from techy_sdk.core.error import TechyError
+from techy_sdk.core.result import TechyResult
+from techy_sdk.core.spec import TechySpec
 
 
 # True when this SDK was generated with the named feature.

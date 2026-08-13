@@ -21,7 +21,7 @@ class Config {
 
 
   main = {
-    name: 'ProjectName',
+    name: 'Techy',
   }
 
 
@@ -71,6 +71,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/json",
               "parts": [
@@ -87,6 +88,7 @@ class Config {
             {
               "active": true,
               "args": {},
+              "kind": "http",
               "method": "GET",
               "orig": "/api/text",
               "parts": [

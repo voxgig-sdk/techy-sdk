@@ -121,7 +121,8 @@ Create a mock client for unit testing — no server required:
 const client = TechySDK.test()
 
 const phrase = await client.Phrase().load()
-// phrase is a bare entity populated with mock response data
+// phrase is the entity, populated with mock response data
+// — call phrase.data() for the record itself
 console.log(phrase)
 ```
 

@@ -22,3 +22,5 @@ main: {
       "x-documentation": "https://techy-api.vercel.app/"
     }
   }
+}
+

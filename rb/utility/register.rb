@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ TechyUtility.registrar = ->(u) {
   u.prepare_params = TechyUtilities::PrepareParams
   u.prepare_path = TechyUtilities::PreparePath
   u.prepare_query = TechyUtilities::PrepareQuery
+  u.graphql_body = TechyUtilities::GraphqlBody
+  u.graphql_errors = TechyUtilities::GraphqlErrors
   u.result_basic = TechyUtilities::ResultBasic
   u.result_body = TechyUtilities::ResultBody
   u.result_headers = TechyUtilities::ResultHeaders

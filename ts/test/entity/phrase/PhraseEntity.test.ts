@@ -62,7 +62,7 @@ describe('PhraseEntity', async () => {
     // LOAD
     const phrase_ref01_ent = client.Phrase()
     const phrase_ref01_match_dt0: any = {}
-    const phrase_ref01_data_dt0 = await phrase_ref01_ent.load(phrase_ref01_match_dt0)
+    const phrase_ref01_data_dt0 = (await phrase_ref01_ent.load(phrase_ref01_match_dt0)).data()
     assert(null != phrase_ref01_data_dt0)
 
 

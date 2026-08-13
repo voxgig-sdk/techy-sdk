@@ -16,11 +16,11 @@
 import pytest
 
 from techy_sdk import TechySDK
-from core.error import TechyError
-from core.result import TechyResult
-from core.response import TechyResponse
-from core.spec import TechySpec
-from feature.base_feature import TechyBaseFeature
+from techy_sdk.core.error import TechyError
+from techy_sdk.core.result import TechyResult
+from techy_sdk.core.response import TechyResponse
+from techy_sdk.core.spec import TechySpec
+from techy_sdk.feature.base_feature import TechyBaseFeature
 
 
 def _client():

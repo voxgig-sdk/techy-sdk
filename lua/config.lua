@@ -41,6 +41,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/json",
                 ["parts"] = {
@@ -57,6 +58,7 @@ local function make_config()
               {
                 ["active"] = true,
                 ["args"] = {},
+                ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/text",
                 ["parts"] = {
