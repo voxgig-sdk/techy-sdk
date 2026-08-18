@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from techy_sdk.config import make_config
+from techy_sdk.config import shared_config
 from techy_sdk.features import _make_feature
 from techy_sdk.core.control import TechyControl
 from techy_sdk.core.error import TechyError
@@ -24,7 +24,7 @@ from techy_sdk.core.spec import TechySpec
 
 # True when this SDK was generated with the named feature.
 def has_feature(name):
-    feature = make_config().get("feature")
+    feature = shared_config().get("feature")
     return isinstance(feature, dict) and feature.get(name) is not None
 
 

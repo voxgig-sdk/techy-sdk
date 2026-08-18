@@ -40,7 +40,7 @@ class TechySDK
         $utility = new TechyUtility();
         $this->_utility = $utility;
 
-        $config = TechyConfig::make_config();
+        $config = TechyConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

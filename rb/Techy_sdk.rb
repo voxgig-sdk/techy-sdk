@@ -28,7 +28,7 @@ class TechySDK
     utility = TechyUtility.new
     @_utility = utility
 
-    config = TechyConfig.make_config
+    config = TechyConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
