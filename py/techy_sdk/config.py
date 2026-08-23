@@ -28,6 +28,9 @@ def make_config():
     return {
         "main": {
             "name": "Techy",
+            "slug": "techy",
+            "version": "0.0.1",
+            "target": "py",
         },
         "feature": {
             "test": {
@@ -51,6 +54,7 @@ def make_config():
           {
             "name": "message",
             "req": True,
+            "short": "The generated tech-savvy phrase",
             "type": "`$STRING`",
           },
         ],

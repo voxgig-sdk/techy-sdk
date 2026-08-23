@@ -87,7 +87,7 @@ phrase = client.Phrase()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | `str` | Yes |  |
+| `message` | `str` | Yes | The generated tech-savvy phrase |
 
 ### Operations
 

@@ -241,7 +241,7 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `message` |  |
+| `message` | The generated tech-savvy phrase |
 
 Operations: Load.
 
@@ -266,7 +266,7 @@ Create an instance: `phrase = client.Phrase()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `message` | `str` |  |
+| `message` | `str` | The generated tech-savvy phrase |
 
 #### Example: Load
 

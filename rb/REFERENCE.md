@@ -93,7 +93,7 @@ phrase = client.Phrase
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | `String` | Yes |  |
+| `message` | `String` | Yes | The generated tech-savvy phrase |
 
 ### Operations
 

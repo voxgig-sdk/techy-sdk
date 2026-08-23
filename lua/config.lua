@@ -7,6 +7,9 @@ local function make_config()
   return {
     main = {
       name = "Techy",
+      slug = "techy",
+      version = "0.0.1",
+      target = "lua",
     },
     feature = {
       ["test"] = {
@@ -30,6 +33,7 @@ local function make_config()
           {
             ["name"] = "message",
             ["req"] = true,
+            ["short"] = "The generated tech-savvy phrase",
             ["type"] = "`$STRING`",
           },
         },

@@ -8,6 +8,7 @@ main: kit: entity: phrase: {
     {
       name: "message"
       req: true
+      short: "The generated tech-savvy phrase"
       type: "`$STRING`"
     }
   ]

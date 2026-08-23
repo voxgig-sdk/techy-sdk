@@ -116,7 +116,7 @@ const phrase = client.Phrase()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | `string` | Yes |  |
+| `message` | `string` | Yes | The generated tech-savvy phrase |
 
 ### Operations
 

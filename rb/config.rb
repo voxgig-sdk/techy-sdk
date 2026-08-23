@@ -19,6 +19,9 @@ module TechyConfig
     {
       "main" => {
         "name" => "Techy",
+        "slug" => "techy",
+        "version" => "0.0.1",
+        "target" => "rb",
       },
       "feature" => {
         "test" => {
@@ -42,6 +45,7 @@ module TechyConfig
             {
               "name" => "message",
               "req" => true,
+              "short" => "The generated tech-savvy phrase",
               "type" => "`$STRING`",
             },
           ],

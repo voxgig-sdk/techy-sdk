@@ -90,7 +90,7 @@ local phrase = client:Phrase(nil)
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `message` | `string` | Yes |  |
+| `message` | `string` | Yes | The generated tech-savvy phrase |
 
 ### Operations
 

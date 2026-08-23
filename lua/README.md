@@ -225,7 +225,7 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `message` |  |
+| `message` | The generated tech-savvy phrase |
 
 Operations: Load.
 
@@ -250,7 +250,7 @@ Create an instance: `local phrase = client:Phrase(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `message` | `string` |  |
+| `message` | `string` | The generated tech-savvy phrase |
 
 #### Example: Load
 

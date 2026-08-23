@@ -235,7 +235,7 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `message` |  |
+| `message` | The generated tech-savvy phrase |
 
 Operations: Load.
 
@@ -260,7 +260,7 @@ Create an instance: `phrase = client.Phrase`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `message` | `String` |  |
+| `message` | `String` | The generated tech-savvy phrase |
 
 #### Example: Load
 
