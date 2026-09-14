@@ -105,7 +105,7 @@ local result, err = client:Phrase():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/techy` | publish pending — [install from git tag](https://github.com/voxgig-sdk/techy-sdk/releases) |
+| TypeScript | `@voxgig-sdk/techy-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/techy-sdk/releases) |
 | Python | `voxgig-sdk-techy` | publish pending — [install from git tag](https://github.com/voxgig-sdk/techy-sdk/releases) |
 | PHP | `voxgig-sdk/techy` | publish pending — [install from git tag](https://github.com/voxgig-sdk/techy-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/techy-sdk/go` | `go get github.com/voxgig-sdk/techy-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:Phrase():load()
 ### TypeScript
 
 ```ts
-import { TechySDK } from '@voxgig-sdk/techy'
+import { TechySDK } from '@voxgig-sdk/techy-sdk'
 
 const client = new TechySDK()
 

@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { TechySDK } from '@voxgig-sdk/techy'
+import { TechySDK } from '@voxgig-sdk/techy-sdk'
 
 const client = new TechySDK()
 ```
@@ -401,7 +401,7 @@ techy/
 Import the SDK from the package root:
 
 ```ts
-import { TechySDK } from '@voxgig-sdk/techy'
+import { TechySDK } from '@voxgig-sdk/techy-sdk'
 ```
 
 ### Entity state
